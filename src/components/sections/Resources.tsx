@@ -104,7 +104,7 @@ export function Resources() {
       <Reveal className="mb-12 flex items-end justify-between">
         <div>
           <SectionLabel>Journal</SectionLabel>
-          <h2 className="font-display-lg-mobile text-on-surface">
+          <h2 className="font-display-lg-mobile text-on-surface md:font-display-lg">
             Latest from our journal
           </h2>
         </div>

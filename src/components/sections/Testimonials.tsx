@@ -108,7 +108,7 @@ export function Testimonials() {
     <Section background="bg-surface-container/40">
       <Reveal className="mb-14 text-center">
         <SectionLabel className="justify-center">Loved by users</SectionLabel>
-        <h2 className="font-display-lg-mobile text-on-surface">
+        <h2 className="font-display-lg-mobile text-on-surface md:font-display-lg">
           Real people. Real results.
         </h2>
       </Reveal>

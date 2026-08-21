@@ -58,7 +58,7 @@ function LinkedInIcon() {
 export function Footer() {
   return (
     <footer className="border-t border-surface-variant bg-surface/80 backdrop-blur-md">
-      <div className="mx-auto max-w-container px-margin-mobile py-section-padding md:px-gutter">
+      <div className="mx-auto max-w-container px-margin-mobile py-section-padding md:px-gutter md:py-section-padding-md">
         <div className="flex flex-col justify-between gap-12 md:flex-row">
           {/* Brand */}
           <div className="flex max-w-xs flex-col gap-5">
@@ -100,7 +100,7 @@ export function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="flex flex-wrap gap-8 md:gap-16">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:flex md:flex-wrap md:gap-16">
             {COLUMNS.map((col) => (
               <div key={col.title} className="flex flex-col gap-3">
                 <h5 className="text-sm font-bold text-on-surface">{col.title}</h5>

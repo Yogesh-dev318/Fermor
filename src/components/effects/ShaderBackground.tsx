@@ -22,13 +22,20 @@ export function ShaderBackground() {
 
     // Respect reduced-motion: render a single static frame.
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    // On small / coarse-pointer devices, render a single static frame to save battery.
+    const isMobile = window.matchMedia('(max-width: 768px), (pointer: coarse)').matches
+    const staticFrame = reduceMotion || isMobile
 
     const syncSize = () => {
       const w = canvas.clientWidth || window.innerWidth
       const h = canvas.clientHeight || window.innerHeight
-      if (canvas.width !== w || canvas.height !== h) {
-        canvas.width = w
-        canvas.height = h
+      // Cap canvas resolution on mobile for performance.
+      const scale = isMobile ? 0.5 : 1
+      const tw = Math.round(w * scale)
+      const th = Math.round(h * scale)
+      if (canvas.width !== tw || canvas.height !== th) {
+        canvas.width = tw
+        canvas.height = th
       }
     }
 
@@ -138,6 +145,7 @@ export function ShaderBackground() {
 
     const mouse = { x: canvas.width / 2, y: canvas.height / 2 }
     const onMouseMove = (event: MouseEvent) => {
+      if (staticFrame) return
       const rect = canvas.getBoundingClientRect()
       if (!rect.width || !rect.height) return
       const nx = (event.clientX - rect.left) / rect.width
@@ -155,7 +163,7 @@ export function ShaderBackground() {
       if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height)
       if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y)
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
-      if (!reduceMotion) rafId = requestAnimationFrame(render)
+      if (!staticFrame) rafId = requestAnimationFrame(render)
     }
     render(0)
 

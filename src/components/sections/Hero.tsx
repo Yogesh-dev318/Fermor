@@ -47,20 +47,20 @@ export function Hero() {
     <header
       id="top"
       ref={heroRef}
-      className="relative mx-auto max-w-container overflow-visible px-margin-mobile pt-36 pb-28 md:px-gutter"
+      className="relative mx-auto max-w-container overflow-hidden px-margin-mobile pt-28 pb-20 md:overflow-visible md:px-gutter md:pt-36 md:pb-28"
     >
       {/* Ambient blobs */}
       <div className="pointer-events-none absolute -top-24 left-1/4 -z-10 h-[480px] w-[480px] rounded-full bg-primary/10 blur-[100px]" />
       <div className="pointer-events-none absolute top-16 right-0 -z-10 h-72 w-72 rounded-full bg-primary-fixed/30 blur-3xl" />
 
-      <div className="grid min-h-[680px] items-center gap-12 md:grid-cols-12">
+      <div className="grid min-h-[560px] items-center gap-12 md:min-h-[680px] md:grid-cols-12">
         {/* ── Copy ── */}
         <div className="z-10 flex flex-col gap-6 md:col-span-6">
           <div data-hero>
             <SectionLabel>Human-First Finance</SectionLabel>
           </div>
 
-          <h1 data-hero className="text-on-surface font-display-lg-mobile md:font-display-lg">
+          <h1 data-hero className="text-on-surface text-[34px] leading-[1.15] font-semibold tracking-tight md:font-display-lg">
             Understand your money.
             <br />
             Act with confidence.
@@ -114,15 +114,15 @@ export function Hero() {
         </div>
 
         {/* ── Widget ── */}
-        <div data-hero className="relative mt-12 flex flex-col items-center justify-center md:col-span-6 md:mt-0">
+        <div data-hero className="relative mt-8 flex flex-col items-center justify-center md:col-span-6 md:mt-0">
           <div className="absolute inset-0 -z-10 scale-110 rounded-full bg-primary/10 blur-3xl" />
 
           <div className="relative w-full max-w-sm">
-            {/* Floating metric badges */}
+            {/* Floating metric badges — hidden on very small screens to avoid overflow */}
             {FLOATING_BADGES.map((badge) => (
               <div
                 key={badge.value}
-                className="absolute z-20 flex items-center gap-2.5 rounded-xl border border-surface-variant bg-white/95 px-4 py-2.5 shadow-card-hover backdrop-blur-sm"
+                className="absolute z-20 hidden items-center gap-2.5 rounded-xl border border-surface-variant bg-white/95 px-4 py-2.5 shadow-card-hover backdrop-blur-sm sm:flex"
                 style={{
                   ...badge.pos,
                   animation: `float 4s ease-in-out ${badge.animationDelay} infinite`,
@@ -155,7 +155,7 @@ export function Hero() {
           </div>
 
           {/* Scroll cue */}
-          <div className="mt-12 flex animate-bounce-slow flex-col items-center gap-1 text-secondary">
+          <div className="mt-8 flex animate-bounce-slow flex-col items-center gap-1 text-secondary md:mt-12">
             <span className="text-xs uppercase tracking-widest">Scroll to explore</span>
             <Icon name="keyboard_arrow_down" className="text-xl" />
           </div>

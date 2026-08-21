@@ -25,7 +25,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`${padded ? 'py-section-padding' : ''} ${background} ${className}`}
+      className={`${padded ? 'py-section-padding md:py-section-padding-md' : ''} ${background} ${className}`}
     >
       <div className="mx-auto max-w-container px-margin-mobile md:px-gutter">
         {children}

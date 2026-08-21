@@ -63,7 +63,7 @@ export function ContactPage() {
   return (
     <>
       {/* Header */}
-      <Section className="pt-36 pb-16">
+      <Section className="pt-28 pb-12 md:pt-36 md:pb-16">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <SectionLabel className="justify-center">Get in touch</SectionLabel>
@@ -82,7 +82,7 @@ export function ContactPage() {
         </div>
       </Section>
 
-      <Section padded={false} className="pb-section-padding">
+      <Section padded={false} className="pb-section-padding md:pb-section-padding-md">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
           {/* Contact methods */}
           <div className="flex flex-col gap-4">
@@ -116,7 +116,7 @@ export function ContactPage() {
 
           {/* Form */}
           <Reveal delay={0.15}>
-            <div className="rounded-3xl border border-surface-variant bg-white/90 p-8 shadow-card-hover backdrop-blur-sm md:p-10">
+            <div className="rounded-3xl border border-surface-variant bg-white/90 p-6 shadow-card-hover backdrop-blur-sm md:p-10">
               <AnimatePresence mode="wait">
                 {submitted ? (
                   <motion.div

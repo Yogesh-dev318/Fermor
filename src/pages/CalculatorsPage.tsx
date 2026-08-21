@@ -80,7 +80,7 @@ export function CalculatorsPage() {
   return (
     <>
       {/* Header */}
-      <Section className="pt-36 pb-12">
+      <Section className="pt-28 pb-10 md:pt-36 md:pb-12">
         <div className="text-center">
           <Reveal>
             <SectionLabel className="justify-center">25+ free tools</SectionLabel>
@@ -102,7 +102,7 @@ export function CalculatorsPage() {
       </Section>
 
       {/* Featured SIP calculator */}
-      <Section padded={false} className="pb-section-padding">
+      <Section padded={false} className="pb-section-padding md:pb-section-padding-md">
         <SipCalculator />
       </Section>
 

@@ -79,13 +79,13 @@ export function ComparisonTable() {
     <Section background="bg-surface-container-lowest">
       <Reveal className="mb-12 text-center">
         <SectionLabel className="justify-center">Why Fermor</SectionLabel>
-        <h2 className="font-display-lg-mobile text-on-surface">
+        <h2 className="font-display-lg-mobile text-on-surface md:font-display-lg">
           Built different by design.
         </h2>
       </Reveal>
 
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[600px] overflow-hidden rounded-2xl border border-surface-variant bg-white/80 text-left shadow-card backdrop-blur-sm">
+      <div className="overflow-x-auto -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+        <table className="w-full min-w-[500px] overflow-hidden rounded-2xl border border-surface-variant bg-white/80 text-left shadow-card backdrop-blur-sm sm:min-w-[600px]">
           <thead className="text-secondary">
             <tr>
               <th className="w-1/3 border-b border-surface-variant bg-surface-container-low p-6 text-title-sm font-semibold">

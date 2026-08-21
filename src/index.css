@@ -9,6 +9,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -16,6 +17,12 @@
     font-family: 'Inter', system-ui, sans-serif;
     font-feature-settings: 'tnum' 1, 'cv05' 1;
     -webkit-font-feature-settings: 'tnum' 1, 'cv05' 1;
+    overflow-x: hidden;
+  }
+
+  /* Prevent iOS zoom on input focus */
+  input, textarea, select {
+    font-size: 16px;
   }
 
   ::selection {
@@ -127,6 +134,7 @@ input[type='range'] {
   appearance: none;
   background: transparent;
   cursor: pointer;
+  width: 100%;
 }
 input[type='range']::-webkit-slider-runnable-track {
   height: 6px;
@@ -159,4 +167,16 @@ input[type='range']::-moz-range-thumb {
   background: #126a3a;
   border: none;
   box-shadow: 0 1px 6px rgba(18, 106, 58, 0.35);
+}
+/* Larger touch target on coarse pointers */
+@media (pointer: coarse) {
+  input[type='range']::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    margin-top: -9px;
+  }
+  input[type='range']::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+  }
 }

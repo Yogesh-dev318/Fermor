@@ -15,9 +15,9 @@ const PARTNERS = [
  */
 export function TrustStrip() {
   return (
-    <section className="overflow-hidden border-y border-surface-variant bg-surface/60 py-8 backdrop-blur-sm">
+    <section className="overflow-hidden border-y border-surface-variant bg-surface/60 py-6 backdrop-blur-sm md:py-8">
       {/* Label */}
-      <p className="mb-5 text-center text-label-caps uppercase tracking-widest text-secondary/60">
+      <p className="mb-4 text-center text-label-caps uppercase tracking-widest text-secondary/60 md:mb-5">
         Works with your bank
       </p>
 

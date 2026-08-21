@@ -61,7 +61,7 @@ export function AboutPage() {
   return (
     <>
       {/* Header */}
-      <Section className="pt-36 pb-16">
+      <Section className="pt-28 pb-12 md:pt-36 md:pb-16">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <SectionLabel className="justify-center">About Fermor</SectionLabel>
@@ -82,9 +82,9 @@ export function AboutPage() {
       </Section>
 
       {/* Mission statement panel */}
-      <Section padded={false} className="pb-section-padding">
+      <Section padded={false} className="pb-section-padding md:pb-section-padding-md">
         <Reveal y={20}>
-          <div className="rounded-3xl border border-surface-variant bg-gradient-to-br from-primary/5 to-primary-fixed/20 p-10 text-center md:p-16">
+          <div className="rounded-3xl border border-surface-variant bg-gradient-to-br from-primary/5 to-primary-fixed/20 p-8 text-center md:p-16">
             <Icon name="format_quote" className="mx-auto mb-4 text-4xl text-primary/40" />
             <p className="mx-auto max-w-2xl text-headline-md-mobile leading-snug text-on-surface md:text-headline-md">
               "Most financial products are sold, not chosen. We wanted to build

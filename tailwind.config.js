@@ -70,7 +70,8 @@ export default {
         'margin-mobile': '20px',
         'container-max': '1200px',
         gutter: '24px',
-        'section-padding': '120px',
+        'section-padding': '64px',
+        'section-padding-md': '120px',
       },
       maxWidth: {
         container: '1200px',

@@ -62,7 +62,7 @@ export function SipCalculator() {
   const returnsPct = 100 - investedPct
 
   return (
-    <div className="grid gap-10 rounded-3xl border border-surface-variant bg-white/90 p-8 shadow-card-hover backdrop-blur-sm md:grid-cols-2 md:p-12">
+    <div className="grid gap-6 rounded-3xl border border-surface-variant bg-white/90 p-6 shadow-card-hover backdrop-blur-sm md:grid-cols-2 md:gap-10 md:p-12">
       {/* Inputs */}
       <div>
         <h3 className="mb-6 text-title-sm font-semibold text-on-surface">

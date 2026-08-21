@@ -177,7 +177,7 @@ export function FeatureDeepDive() {
           <SectionLabel className="justify-center">Features</SectionLabel>
         </Reveal>
         <Reveal delay={0.05}>
-          <h2 className="mb-12 font-display-lg-mobile text-on-surface md:font-display-lg">
+          <h2 className="mb-8 font-display-lg-mobile text-on-surface md:mb-12 md:font-display-lg">
             Everything you need, nothing you don't.
           </h2>
         </Reveal>
@@ -218,10 +218,10 @@ export function FeatureDeepDive() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="flex flex-col items-center gap-10 p-8 md:flex-row md:gap-16 md:p-12"
+            className="flex flex-col items-center gap-8 p-6 md:flex-row md:gap-16 md:p-12"
           >
             <div className="md:w-1/2" style={{ transform: 'translateZ(20px)' }}>
-              <h3 className="mb-4 font-display-lg-mobile text-on-surface">
+              <h3 className="mb-4 font-display-lg-mobile text-on-surface md:font-display-lg">
                 {content.heading}
               </h3>
               <p className="mb-6 text-body-lg text-secondary">{content.body}</p>

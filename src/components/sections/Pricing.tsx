@@ -115,7 +115,7 @@ function PlanCard({ plan, isAnnual }: { plan: Plan; isAnnual: boolean }) {
   return (
     <div
       ref={tiltRef}
-      className={`tilt-card relative flex h-full flex-col overflow-hidden rounded-2xl p-10 ${
+      className={`tilt-card relative flex h-full flex-col overflow-hidden rounded-2xl p-6 sm:p-8 md:p-10 ${
         isDark
           ? 'bg-ink shadow-cta'
           : 'border border-surface-variant bg-white/90 card-shadow backdrop-blur-sm'
@@ -153,7 +153,7 @@ function PlanCard({ plan, isAnnual }: { plan: Plan; isAnnual: boolean }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
-              className={`text-display-lg font-bold leading-none tabular-nums ${
+              className={`text-4xl font-bold leading-none tabular-nums sm:text-display-lg ${
                 isDark ? 'text-white' : 'text-on-surface'
               }`}
             >

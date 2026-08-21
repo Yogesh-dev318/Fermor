@@ -23,7 +23,7 @@ export function FinalCTA() {
   return (
     <section
       id="get-started"
-      className="relative overflow-hidden bg-primary py-28 text-center text-white"
+      className="relative overflow-hidden bg-primary py-20 text-center text-white md:py-28"
     >
       {/* Layered mesh blobs for depth */}
       <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-white/5 blur-3xl" />

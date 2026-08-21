@@ -47,7 +47,7 @@ function StatItem({ stat, isLast }: StatItemProps) {
 
   return (
     <div className="relative text-center">
-      <div ref={ref} className="mb-1 text-5xl font-bold tabular-nums text-primary md:text-6xl">
+      <div ref={ref} className="mb-1 text-4xl font-bold tabular-nums text-primary sm:text-5xl md:text-6xl">
         {stat.prefix ?? ''}{display}{stat.suffix}
       </div>
       <div className="font-medium text-white/90">{stat.label}</div>
@@ -66,13 +66,13 @@ function StatItem({ stat, isLast }: StatItemProps) {
  */
 export function StatsBand() {
   return (
-    <section className="bg-ink py-24 text-white">
+    <section className="bg-ink py-16 text-white md:py-24">
       <div className="mx-auto max-w-container px-margin-mobile md:px-gutter">
-        <p className="mb-10 text-center text-label-caps uppercase tracking-widest text-gray-500">
+        <p className="mb-8 text-center text-label-caps uppercase tracking-widest text-gray-500 md:mb-10">
           Trusted at scale
         </p>
 
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-12">
           {STATS.map((stat, i) => (
             <StatItem key={stat.label} stat={stat} isLast={i === STATS.length - 1} />
           ))}

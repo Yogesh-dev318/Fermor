@@ -112,14 +112,14 @@ export function FAQ() {
   const toggle = (i: number) => setOpenIdx((prev) => (prev === i ? null : i))
 
   return (
-    <section className="bg-surface-container-low/60 py-section-padding">
+    <section className="bg-surface-container-low/60 py-section-padding md:py-section-padding-md">
       <div className="mx-auto max-w-3xl px-margin-mobile md:px-gutter">
         <div className="mb-12 text-center">
           <Reveal>
             <SectionLabel className="justify-center">FAQ</SectionLabel>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="font-display-lg-mobile text-on-surface">
+            <h2 className="font-display-lg-mobile text-on-surface md:font-display-lg">
               Frequently asked questions
             </h2>
           </Reveal>
